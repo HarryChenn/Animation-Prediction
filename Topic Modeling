@@ -1,0 +1,33 @@
+#Import Required Packages
+We first import the packages we need such as gensim, pandas, nltk tokenizers, glob....
+
+import gensim 
+
+from nltk.tokenize import sent_tokenize
+from nltk.tokenize.treebank import TreebankWordTokenizer
+import nltk
+nltk.download('punkt')
+import glob
+from pathlib import Path
+from bs4 import BeautifulSoup 
+import re 
+from sklearn import feature_extraction
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib Inline
+import seaborn as sns
+import os
+
+# Load anime data
+! pip install -q kaggle
+
+from google.colab import files
+
+files.upload()
+
+! mkdir ~/.kaggle
+
+! cp kaggle.json ~/.kaggle/
+
+! chmod 600 ~/.kaggle/kaggle.json
