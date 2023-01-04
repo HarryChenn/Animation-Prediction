@@ -1,0 +1,46 @@
+from bs4 import BeautifulSoup
+import requests 
+from collections import Counter
+
+#Create a list to store the link to anime
+url = []
+
+#We will select the anime also based on their popularity
+for i in df_anime['popularity']:
+  #Top 200 animes
+  if(i < 200):
+    #Add their link into the list 'url'
+    url.append(df_anime.link[i])
+
+# Now we create a function to do web scraping. We find the corresponding website prefix for each 
+# producer and return the last producers because the last producer is the production studio
+
+#We will create a method named 'scrape' that has the anime link as parameter
+def scrape(url):
+  #We then use buautiful soup to web srape the corresponding link
+  response = requests.get(url)
+  html_str = response.text
+  document = BeautifulSoup(html_str, "html.parser")
+  #Then we use the select method in beautiful soup to find the producers using prefix "/anime/producer"
+  tags = []
+  result = []
+  tags = document.select('a[href^="/anime/producer"]')
+  #We need to consider the edge case when there is no specified producer for an anime
+  if len(tags) == 0:
+    return
+  for ele in tags:
+    #Then we will add all the producers we got to the list 'result'
+      result.append(ele.string)
+  #Because the production studio is always listed at the end of all producers, we will return the last element
+  return result[len(result)-1]
+  
+#Now we will call the method we created to run through the 'url' list that we created
+tags = []
+for i in url:
+  tags.append(scrape(i))
+tags
+
+#The following code will count the appearences of each production studio in our list of anime
+counts = dict(Counter(tags))
+duplicates = {key:value for key, value in counts.items() if value > 1}
+print(duplicates)
