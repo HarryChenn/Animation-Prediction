@@ -13,3 +13,6 @@ As for the previous lists of topic word choices shown, words like "young", "tryi
 Next, to determine whether there is a correlation between the choice of topic and the popularity of an anime, we will then use the same method to extract the keyword topics for the remaining two popularity groups and compare their results.
 Furthermore, we will continue explore the factors that may have an imnpact on the success of an animation. Following the collection of the trends for the animations, we will web-scraping additional variables. By combining metadata, we hope to investigate whether popular anime production studio are generally well-liked for all of their animations, whether anime with a school setting receives more airtime, or whether action movies in general might get better reviews, by combining metadata.
 
+# Web Scrapper
+By running the code in Web Scrapper, we can get the associated production studio based on the given popularity group. Then we can find the pattern of animation's popularity with its production studio
+
