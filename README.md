@@ -1,10 +1,11 @@
+
 # Animation-Prediction-Model
 
 <!-- /TOC -->
-- [Research Question](#Research Question)
-- [Data filtering/Cleaning](#Data filtering/Cleaning)
-- [Topic Modeling Result Interpretation](#Topic Modeling Result Interpretation)
-- [Web Scrapper](#Web Scrapper)
+- [Research Question](#research-question)
+- [Data filtering/Cleaning](#data-filteringcleaning)
+- [Topic Modeling Result Interpretation](#topic-modeling-result-interpretation)
+- [Web Scrapper](#web-scrapper)
 <!-- /TOC -->
     
 ## Research Question
