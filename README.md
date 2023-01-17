@@ -1,10 +1,11 @@
 # Animation-Prediction-Model
 
+<!-- /TOC -->
 - [Research Question](#Research Question)
 - [Data filtering/Cleaning](#Data filtering/Cleaning)
 - [Topic Modeling Result Interpretation](#Topic Modeling Result Interpretation)
 - [Web Scrapper](#Web Scrapper)
-
+<!-- /TOC -->
     
 ## Research Question
 Our main objective is to identify the factors that contribute to the difference in the popularity of different animations. Popularity is a perfect indicator to measure an anime's success. There are multiple factors that affect anime's popularity. The production studio, the genre, and previously published reviews, for instance, could all have an effect. 
